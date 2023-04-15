@@ -194,7 +194,7 @@ text-transform: uppercase;
 }
 .burger__el {
     height: 3px;
-    width: 50px;
+    width: 30px;
     margin-bottom: 5px;
     background-color: #ffffff;
 }
@@ -281,6 +281,10 @@ padding-top: 15%;
     font-weight: 100; 
     font-size: 20px;
 }
+.our_skald{
+    font-weight: 600;
+    font-size: 96px;
+}
 @media only screen and (max-width:1550px){
     .about__block{
         margin-bottom: 450px;
@@ -345,9 +349,6 @@ padding-top: 15%;
     }
 }
 @media only screen and (max-width:700px){
-    .about__block{
-        margin-bottom: 100px;
-    }
 }
 @media only screen and (max-width:650px){
     .title {
@@ -358,6 +359,10 @@ padding-top: 15%;
     }
     .save{
         font-size: 15px;
+    }
+    .our_skald{
+        font-weight: 600;
+        font-size: 56px;
     }
 }
 @media only screen and (max-width: 600px){
