@@ -396,7 +396,7 @@ padding-top: 15%;
     }
     .text{
         padding-right: 10px;
-        font-size: 12px;
+        font-size: 10px;
     }
     .welcome__title{
         font-size: 25px;
@@ -459,11 +459,19 @@ padding-top: 15%;
         margin-bottom: 15px;
     }
     .header__block{
-        padding: 10px 5px;
+        padding: 5px 2px;
         margin-right: 25px;
     }
     .save{
         padding: 20px 20px;
+        font-size: 15px;
+    }
+    .header__main{
+        padding: 0 10px;
+    }
+    .nav__el{
+        font-size: 15px;
+        margin-right: 10px;
     }
     }
     .header__block3{
