@@ -178,6 +178,7 @@ text-transform: uppercase;
     bottom: 0px;
     text-align: center;
     color:#B1B1B1;
+    margin-bottom: 10px;
 }
 .bg{
     margin-top: -100vh;
@@ -310,6 +311,34 @@ width: 100%;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
 }
+.partners__element {
+    margin-top: 30px;
+    display: flex;
+    background-color: #ebebeb;
+    padding: 25px 25px;
+    overflow-x: scroll;
+}
+.element__foto img {
+    height: 100px;
+    padding-right: 35px;
+}
+
+.partners__element::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f9f9fd;
+    height: 7px;
+  }
+  
+  .partners__element::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a8a8a8;
+  }
+  
+  .partners__element::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+  }
 @media only screen and (max-width:1550px){
     .about__block{
         margin-bottom: 450px;
