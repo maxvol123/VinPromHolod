@@ -478,6 +478,13 @@ width: 100%;
     .element__text{
         font-size: 12px;
     }
+    .text__li{
+        font-size: 12px;
+    }
+    .video__text{
+        font-size: 20px;
+        padding-left: 10px;
+    }
     .footer__info{
         font-size: 12px;
     }
@@ -534,8 +541,14 @@ width: 100%;
         padding: 20px 20px;
         font-size: 15px;
     }
-    .header__main{
-        padding: 0 10px;
+    .main__title{
+        margin: 0 10px;
+    }
+    .save{
+        margin: 0 10px;
+    }
+    .blocks{
+        margin: 0 10px;
     }
     .nav__el{
         font-size: 15px;
