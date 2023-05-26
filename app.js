@@ -20,7 +20,6 @@ function Next() {
     }
 }
 setInterval(Next, 3000);
-console.log()
 let i = 0
 let interval1 = setInterval(() => {
     document.querySelectorAll(".title")[0].innerHTML=i
@@ -64,13 +63,15 @@ let interval4 = setInterval(() => {
         i4i=i4i-1
     }
 }, 75);
-
-let res = axios.get("https://backendvinpromholod.onrender.com/one")
+async function name() {
+    let res = await axios.get("https://backendvinpromholod.onrender.com/one")
 .then((res)=>{
+    console.log(res.data.number);
     localStorage.setItem("counter",res.data.number)
   })
-  console.log(Number(localStorage.getItem("counter")))
 axios.patch("https://backendvinpromholod.onrender.com/one",{
     number:Number(localStorage.getItem("counter"))
   })
   document.querySelector(".info__c").innerHTML+=`Відвідувачів ${localStorage.getItem("counter")}`
+}
+name()
