@@ -1,3 +1,4 @@
+
 function Scroll(el) {
 let element = document.querySelector(`.${el}`)
 element.scrollIntoView(false)
@@ -34,7 +35,6 @@ let interval2 = setInterval(() => {
     document.querySelectorAll(".title")[1].innerHTML=`-${i2} - ${i2i}`
     i2=i2+1
     i2i=i2i+1
-    console.log(123);
     if(i2>10){
         i2=i2-1
     }
@@ -64,3 +64,13 @@ let interval4 = setInterval(() => {
         i4i=i4i-1
     }
 }, 75);
+
+let res = axios.get("https://backendvinpromholod.onrender.com/one")
+.then((res)=>{
+    localStorage.setItem("counter",res.data.number)
+  })
+  console.log(Number(localStorage.getItem("counter")))
+axios.patch("https://backendvinpromholod.onrender.com/one",{
+    number:Number(localStorage.getItem("counter"))
+  })
+  document.querySelector(".info__c").innerHTML+=`Відвідувачів ${localStorage.getItem("counter")}`
