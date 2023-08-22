@@ -351,6 +351,73 @@ width: 50%;
     border-radius: 10px;
     background-color: #f9f9fd;
   }
+  .modal{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff58;
+    position: fixed;
+  }
+  .modal > div> form{
+    margin: 120px auto;
+    padding: 50px 20px;
+    background-color: white;
+    width: 20vw;
+    border-radius: 5%;
+    min-width: 400px;
+  }
+  .modal > div> form> input{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 30vh;
+  }
+  input{
+    outline: 0;
+    font-size: 13px;
+    border-radius: 4px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    background: #ffffff;
+    display: block;
+    height: 30px;
+    }
+    input:hover {
+        border-color: #ccc;
+    }
+    input:focus{
+        border-color: #9147ff;
+        background: #fff;
+    }
+    .contactUs{
+        margin-left: 87vw;
+        position: fixed;
+        text-align: right;
+        padding-top: 93vh;
+        color: white;
+    }
+    .contactUs p{
+        width: 150px;
+        text-align: right;
+        background-color: red;
+        padding: 5px 10px;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .close {
+        float: right;
+        width: 1em;
+        height: 1em;
+        background-color: red;
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        align-items: end;
+        margin-top: -20px;
+        cursor: pointer;
+      }
 @media only screen and (max-width:1550px){
     .about__block{
         margin-bottom: 450px;
@@ -373,6 +440,9 @@ width: 50%;
     }
 }
 @media only screen and (max-width:1300px){
+    .contactUs{
+        margin-left: 80vw;
+    }
     .our{
         flex-direction: column;
     }
@@ -403,6 +473,9 @@ width: 50%;
         margin-bottom: 300px;
     }
 }@media only screen and (max-width:950px){
+    .contactUs{
+        margin-left: 72vw;
+    }
     .about__block{
         margin-bottom: 220px;
     }
@@ -462,8 +535,15 @@ width: 50%;
     .video__text{
         margin: 0 0;
     }
+    .contactUs{
+        margin-left: 68vw;
+    }
 }
 @media only screen and (max-width: 600px){
+    .modal > div> form{
+        margin: 20px auto;
+        min-width: 320px;
+      }
     .why__video{
         padding: 0 0;
     }
@@ -607,6 +687,9 @@ width: 50%;
     .nav__el{
         font-size: 15px;
         margin-right: 10px;
+    }
+    .contactUs{
+        margin-left: 50vw;
     }
     }
     .header__block3{

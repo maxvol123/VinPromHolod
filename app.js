@@ -1,4 +1,3 @@
-
 function Scroll(el) {
 let element = document.querySelector(`.${el}`)
 element.scrollIntoView(false)
@@ -6,8 +5,10 @@ element.scrollIntoView(false)
 function Burger() {
     if (document.querySelector(".bg_active")) {
         document.querySelector(".bg").classList.remove("bg_active")
+
     }else{
         document.querySelector(".bg").classList.add("bg_active")
+        document.body.style.overflow="hidden"
     }
 }
 function Next() {
@@ -63,15 +64,32 @@ let interval4 = setInterval(() => {
         i4i=i4i-1
     }
 }, 75);
-async function name() {
-    let res = await axios.get("https://backendvinpromholod.onrender.com/one")
-.then((res)=>{
-    console.log(res.data.number);
-    localStorage.setItem("counter",res.data.number)
-  })
-axios.patch("https://backendvinpromholod.onrender.com/one",{
-    number:Number(localStorage.getItem("counter"))
-  })
-  document.querySelector(".info__c").innerHTML+=`Відвідувачів ${localStorage.getItem("counter")}`
+document.querySelector(".form").addEventListener('submit',()=>{
+    send()
+})
+ async function send() {
+    let inputArr = document.querySelectorAll(".element__form")
+    await axios.post("http://localhost:777/send",
+        {
+              name: inputArr[0].value,
+              email:inputArr[1].value,
+              phone:inputArr[2].value,
+              text:inputArr[3].value
+        }
+    )
 }
-name()
+function modal() {
+    if (document.querySelector(".modal").style.display!="none") {
+        document.querySelector(".modal").style.display="none"
+        document.body.style.overflow="visible"
+    }else{
+        document.querySelector(".modal").style.display="block"
+        document.body.style.overflow="hidden"
+    }
+}
+document.querySelector(".contact").addEventListener('click',()=>{
+    modal()
+})
+document.querySelector(".close").addEventListener('click',()=>{
+    modal()
+})

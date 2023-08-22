@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Збереження товару в морозильних камерах. Збережіть витрати на зберіганні продуктів на 30%">
-    <meta name="keywords" content="морозильні камери, аренда морозильних камер">
-    <title>Vin Prom Holod</title>
+    <meta name="keywords" content="морозильні камери, аренда морозильних камер, Вінпромхолод, Він Пром Холод, VinPromHolod, Vin Prom Holod">
+    <title>Вінпромхолод</title>
     <meta data-vue-meta="true" property="og:image" content="./img/Background.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="contactUs" ><p class="contact">Зв'яжіться з нами</p></div>
+    <div class="modal">
+        <div class="form">
+            <form class="form">
+                <div class="closeblock">
+                <div class="close"></div>
+            </div>
+                <h1 style="text-align: center; font-family: 'Montserrat', sans-serif;">Зворотній зв'язок</h1>
+                <input type="text" class="element__form" for="name" required placeholder="Ім'я: ">
+                <input type="email" class="element__form" for="email" required placeholder="Пошта: example@gmail.com">
+                <input type="tel" class="element__form" for="phone" required  placeholder="Номер телефону: 0681111111">
+                <input type="text" class="element__form" for="text" required placeholder="Ваше повідомлення">
+                <input type="submit" class="element__form" value="ВІДПРАВИТИ" style="background-color: rgb(96 165 250 / var(--tw-bg-opacity));">
+            </form>
+        </div>
+    </div>
     <div class="bg">
         <div class="bg_el" onclick="Scroll(`our`);Burger()">Наш склад</div>
         <div class="bg_el" onclick="Scroll(`why`);Burger()">Чому ми</div>
@@ -150,7 +166,8 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="app.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="app.js"></script>
+
 
 </html>
