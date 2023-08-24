@@ -14,14 +14,14 @@
     <div class="contactUs" ><p class="contact">Зв'яжіться з нами</p></div>
     <div class="modal">
         <div class="form">
-            <form class="form">
+            <form class="form" onsubmit="">
                 <div class="closeblock">
                 <div class="close"></div>
             </div>
                 <h1 style="text-align: center; font-family: 'Montserrat', sans-serif;">Зворотній зв'язок</h1>
                 <input type="text" class="element__form" for="name" required placeholder="Ім'я: ">
                 <input type="email" class="element__form" for="email" required placeholder="Пошта: example@gmail.com">
-                <input type="tel" class="element__form" for="phone" required  placeholder="Номер телефону: 0681111111">
+                <input type="tel" class="element__form" for="phone" required  placeholder="Номер телефону: 0681111111" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
                 <input type="text" class="element__form" for="text" required placeholder="Ваше повідомлення">
                 <input type="submit" class="element__form" value="ВІДПРАВИТИ" style="background-color: rgb(96 165 250 / var(--tw-bg-opacity));">
             </form>
@@ -130,6 +130,13 @@
             <div class="element__title">Послуги</div>
             <div class="element__text">Ми пропонуємо різні плани зберігання з різними тарифами, щоб задовольнити потреби різних клієнтів. Можливість орендування морозильної камери на короткий термін також доступна.</div>
            </div>   
+           <div class="image-slideshow">
+            <img src="/img/holodphoto1.jpeg" alt="" class="image fade">
+            <img src="/img/holodphoto2.jpeg" alt="" class="image fade">
+            <img src="/img/holodphoto3.jpeg" alt="" class="image fade">
+            <img src="/img/holodphoto4.jpeg" alt="" class="image fade">
+            <img src="/img/holodphoto5.jpeg" alt="" class="image fade img5" style="">
+        </div>
     </div>
     <div class="why__title">Наші Партнери</div>
     <div class="partners__element">

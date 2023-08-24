@@ -11,16 +11,21 @@ function Burger() {
         document.body.style.overflow="hidden"
     }
 }
-function Next() {
-    if (document.querySelector(".about__slider").children[0].classList[1]==("img__active")) {
-        document.querySelector(".about__slider").children[0].classList.remove("img__active")
-        document.querySelector(".about__slider").children[1].classList.add("img__active")
-    }else{
-        document.querySelector(".about__slider").children[1].classList.remove("img__active")
-        document.querySelector(".about__slider").children[0].classList.add("img__active")
-    }
+let index = 0;
+displayImages();
+function displayImages() {
+  let i;
+  const images = document.getElementsByClassName("image");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index-1].style.display = "block";
+  setTimeout(displayImages, 2000); 
 }
-setInterval(Next, 3000);
 let i = 0
 let interval1 = setInterval(() => {
     document.querySelectorAll(".title")[0].innerHTML=i
@@ -69,7 +74,7 @@ document.querySelector(".form").addEventListener('submit',()=>{
 })
  async function send() {
     let inputArr = document.querySelectorAll(".element__form")
-    await axios.post("http://localhost:777/send",
+    await axios.post("https://backendvinpromholod.onrender.com/send",
         {
               name: inputArr[0].value,
               email:inputArr[1].value,
