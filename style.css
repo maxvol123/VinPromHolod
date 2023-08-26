@@ -29,7 +29,7 @@ min-height: 100vh;
     margin-top: 20px;
 }
 .header__main {
-    background: url(/img/Background.png) no-repeat;
+    background: url(img/Background.png) no-repeat;
     background-size       : cover;
     background-position-x : 50%;
     background-position-y : 50%;
@@ -249,7 +249,7 @@ text-transform: uppercase;
     display: flex;
 }
 .our__title {
-background: url(/img/foto.png);
+background: url(img/foto.png);
 background-size: 100% 100%;
 font-family: 'Raleway', sans-serif;
 padding-top: 15%;

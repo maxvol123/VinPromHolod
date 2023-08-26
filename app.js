@@ -77,9 +77,7 @@ document.querySelector(".form").addEventListener('submit',()=>{
     await axios.post("https://backendvinpromholod.onrender.com/send",
         {
               name: inputArr[0].value,
-              email:inputArr[1].value,
-              phone:inputArr[2].value,
-              text:inputArr[3].value
+              phone:inputArr[1].value,
         }
     )
 }
