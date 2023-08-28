@@ -400,6 +400,7 @@ width: 50%;
         padding-top: 93vh;
         color: white;
         z-index: 999;
+        display: block;
     }
     .contactUs p{
         width: 150px;

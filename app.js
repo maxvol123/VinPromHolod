@@ -5,6 +5,7 @@ element.scrollIntoView(false)
 function Burger() {
     if (document.querySelector(".bg_active")) {
         document.querySelector(".bg").classList.remove("bg_active")
+        document.body.style.overflow="visible"
 
     }else{
         document.querySelector(".bg").classList.add("bg_active")
@@ -69,18 +70,18 @@ let interval4 = setInterval(() => {
         i4i=i4i-1
     }
 }, 75);
-document.querySelector(".form").addEventListener('submit',()=>{
-    send()
-})
- async function send() {
-    let inputArr = document.querySelectorAll(".element__form")
-    await axios.post("https://backendvinpromholod.onrender.com/send",
-        {
-              name: inputArr[0].value,
-              phone:inputArr[1].value,
-        }
-    )
-}
+// document.querySelector(".form").addEventListener('submit',()=>{
+//     send()
+// })
+//  async function send() {
+//     let inputArr = document.querySelectorAll(".element__form")
+//     await axios.post("https://backendvinpromholod.onrender.com/send",
+//         {
+//               name: inputArr[0].value,
+//               phone:inputArr[1].value,
+//         }
+//     )
+// }
 function modal() {
     if (document.querySelector(".modal").style.display!="none") {
         document.querySelector(".modal").style.display="none"
@@ -96,3 +97,9 @@ document.querySelector(".contact").addEventListener('click',()=>{
 document.querySelector(".close").addEventListener('click',()=>{
     modal()
 })
+async function hash() {
+    if (window.location.hash) {
+        await Scroll(window.location.hash.slice(1))
+    } 
+}
+hash()
